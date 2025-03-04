@@ -1,6 +1,6 @@
-name: woker-ai
+name: oggy-ai
 services:
-  - name: woker-ai-service
+  - name: oggy-ai-service
     type: web
     ports:
       - 5000
