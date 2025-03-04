@@ -113,16 +113,16 @@ const port = process.env.PORT || 9090;
   console.log('Bot connected to whatsapp ✅')
   
   let up = `*╭──────────────●●►*
-> *➺ᴀʟɪ_ᴍᴅ-ᴠ1 ᴄᴏɴɴᴇᴄᴛᴇᴅ sᴜᴄᴄᴇssғᴜʟʏ ᴛʏᴘᴇ .ᴍᴇɴᴜ ᴛᴏ ᴄᴏᴍᴍᴀɴᴅ ʟɪsᴛ ᴄʀᴇᴀᴛᴇᴅ ʙʏ 𝐀ɭι̇ι̇*
+> *➺Woker-Md-ᴠ2 ᴄᴏɴɴᴇᴄᴛᴇᴅ sᴜᴄᴄᴇssғᴜʟʏ ᴛʏᴘᴇ .ᴍᴇɴᴜ ᴛᴏ ᴄᴏᴍᴍᴀɴᴅ ʟɪsᴛ ᴄʀᴇᴀᴛᴇᴅ ʙʏ Woker*
 
-> *❁ᴊᴏɪɴ ᴏᴜʀ ᴡʜᴀᴛsᴀᴘᴘ ᴄʜᴀɴɴᴇʟ ғᴏʀ ᴜᴘᴅᴀᴛᴇs ᴀʟɪ_ᴍᴅ*
+> *❁ᴊᴏɪɴ ᴏᴜʀ ᴡʜᴀᴛsᴀᴘᴘ ᴄʜᴀɴɴᴇʟ ғᴏʀ ᴜᴘᴅᴀᴛᴇs Woker_ᴍᴅ*
 
-*https://whatsapp.com/channel/0029VaoRxGmJpe8lgCqT1T2h*
+*https://whatsapp.com/channel/0029Vb3NN9cGk1FpTI1rH31Z*
 
 *YOUR BOT ACTIVE NOW ENJOY♥️🪄*\n\n*PREFIX: ${prefix}*
 
 *╰──────────────●●►*`;
-    conn.sendMessage(conn.user.id, { image: { url: `https://cdn.ironman.my.id/i/2du3i5.jpg` }, caption: up })
+    conn.sendMessage(conn.user.id, { image: { url: `https://cdn.ironman.my.id/i/vzry3x.jpg` }, caption: up })
   }
   })
   conn.ev.on('creds.update', saveCreds)
