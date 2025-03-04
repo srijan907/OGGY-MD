@@ -1,6 +1,6 @@
-name: ali-ai
+name: woker-ai
 services:
-  - name: ali-ai-service
+  - name: woker-ai-service
     type: web
     ports:
       - 5000
