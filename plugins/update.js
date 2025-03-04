@@ -17,11 +17,11 @@ cmd({
   }
 
   try {
-    await reply("*📡 ᴄʜᴇᴄᴋɪɴɢ ғᴏʀ ᴀʟɪ-ᴍᴅ ᴜᴘᴅᴀᴛᴇs...*");
+    await reply("*📡 ᴄʜᴇᴄᴋɪɴɢ ғᴏʀ Woker-ᴍᴅ ᴜᴘᴅᴀᴛᴇs...*");
     
     // Get latest commit from GitHub
     const { data: commitData } = await axios.get(
-      "https://api.github.com/repos/itx-alii-raza/ALI-MD/commits/main"
+      "https://api.github.com/repos/srijan907/WOKER-MD-V2/commits/main"
     );
     const latestCommitHash = commitData.sha;
 
@@ -35,15 +35,15 @@ cmd({
     }
 
     if (latestCommitHash === currentHash) {
-      return reply("*☇ ᴀʟɪ-ᴍᴅ ɪs ᴏɴ ᴛʜᴇ ʟᴀᴛᴇsᴛ ᴠᴇʀsɪᴏɴ: 🤖͎᪳᪳*");
+      return reply("*☇ Woker-ᴍᴅ ɪs ᴏɴ ᴛʜᴇ ʟᴀᴛᴇsᴛ ᴠᴇʀsɪᴏɴ: 🤖͎᪳᪳*");
     }
 
-    await reply("*⏰ ᴀʟɪ-ᴍᴅ ʙᴏᴛ ᴜᴘᴅᴀᴛɪɴɢ...*");
+    await reply("*⏰ Woker-ᴍᴅ ʙᴏᴛ ᴜᴘᴅᴀᴛɪɴɢ...*");
     
     // Download latest code
     const zipPath = path.join(__dirname, "latest.zip");
     const { data: zipData } = await axios.get(
-      "https://github.com/itx-alii-raza/ALI-MD/archive/main.zip",
+      "https://github.com/srijan907/WOKER-MD-V2/archive/main.zip",
       { responseType: "arraybuffer" }
     );
     fs.writeFileSync(zipPath, zipData);
@@ -58,7 +58,7 @@ cmd({
     await reply("*🔄 ʀᴇᴘʟᴀᴄɪɴɢ ғɪʟᴇs...*");
     
     // Copy updated files
-    const sourcePath = path.join(extractPath, "ALI-MD-main");
+    const sourcePath = path.join(extractPath, "WOKER-MD-V2-main");
     const destinationPath = path.join(__dirname, '..');
     copyFolderSync(sourcePath, destinationPath);
 
