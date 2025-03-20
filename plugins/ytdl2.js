@@ -29,7 +29,7 @@ cmd({
             return reply("Failed to fetch the video. Please try again later.");
         }
         
-        let ytmsg = `╔═══〔 *𓆩ု᪳𝐀𝐋𝐈-𝐌𝐃ှ᪳𓆪* 〕═══❒
+        let ytmsg = `╔═══〔 *𓆩Ｒａｂｂｉｔ-𝐌𝐃ှ᪳𓆪* 〕═══❒
 ║╭───────────────◆  
 ║│ *❍ ᴠɪᴅᴇᴏ ᴅᴏᴡɴʟᴏᴀᴅᴇʀ*
 ║╰───────────────◆
@@ -54,7 +54,7 @@ cmd({
             document: { url: data.result.download_url }, 
             mimetype: "video/mp4", 
             fileName: `${data.result.title}.mp4`, 
-            caption: `*${yts.title}*\n> *© ᴘᴏᴡᴇʀᴇᴅ ʙʏ ᴀʟɪ🎐*`
+            caption: `*${yts.title}*\n> *© ᴘᴏᴡᴇʀᴇᴅ ʙʏ Ｒａｂｂｉｔ*`
         }, { quoted: mek });
 
     } catch (e) {
@@ -68,7 +68,7 @@ cmd({
 cmd({ 
      pattern: "mp3", 
      alias: ["yta", "play"], 
-     react: "🎶", 
+     react: "🎧", 
      desc: "Download Youtube song",
      category: "main", 
      use: '.song < Yt url or Name >', 
@@ -90,19 +90,7 @@ const yt = await ytsearch(q);
         return reply("Failed to fetch the audio. Please try again later.");
     }
     
-    let ytmsg = `╔═══〔 *𓆩ု᪳𝐀𝐋𝐈-𝐌𝐃ှ᪳𓆪* 〕═══❒
-║╭───────────────◆  
-║│ *𝐀ɭīī 𝐌Ɗ 𝐃𝐎𝐖𝐍𝐋𝐎𝐀𝐃𝐈𝐍𝐆*
-║╰───────────────◆
-╚══════════════════❒
-╔══════════════════❒
-║ ⿻ *ᴛɪᴛʟᴇ:*  ${yts.title}
-║ ⿻ *ᴅᴜʀᴀᴛɪᴏɴ:*  ${yts.timestamp}
-║ ⿻ *ᴠɪᴇᴡs:*  ${yts.views}
-║ ⿻ *ᴀᴜᴛʜᴏʀ:*  ${yts.author.name}
-║ ⿻ *ʟɪɴᴋ:*  ${yts.url}
-╚══════════════════❒
-*ғꪮʀ ʏꪮꪊ ғꪮʀ ᴀʟʟ ꪮғ ᴀꜱ 🍉*`;
+    let ytmsg = `*PLAYING: ${yts.title}*\n> *© ᴘᴏᴡᴇʀᴇᴅ ʙʏ ᴀʟɪ-ᴍᴅ🫟*`;
 
 
 
@@ -113,12 +101,12 @@ const yt = await ytsearch(q);
     await conn.sendMessage(from, { audio: { url: data.result.downloadUrl }, mimetype: "audio/mpeg" }, { quoted: mek });
     
     // Send document file
-    await conn.sendMessage(from, { 
-        document: { url: data.result.downloadUrl }, 
-        mimetype: "audio/mpeg", 
-        fileName: `${data.result.title}.mp3`, 
-        caption: `> *© ᴘᴏᴡᴇʀᴇᴅ ʙʏ ᴀʟɪ🎐*`
-    }, { quoted: mek });
+    //await conn.sendMessage(from, { 
+       // document: { url: data.result.downloadUrl }, 
+      ///  mimetype: "audio/mpeg", 
+      //  fileName: `${data.result.title}.mp3`, 
+      //  caption: `> *© ᴘᴏᴡᴇʀᴇᴅ ʙʏ ᴀʟɪ🎐*`
+  //  }, { quoted: mek });
 
 } catch (e) {
     console.log(e);
