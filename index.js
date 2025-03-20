@@ -115,13 +115,13 @@ const port = process.env.PORT || 9090;
   console.log('Plugins installed successful ✅')
   console.log('Bot connected to whatsapp ✅')
   
-  let up = `*𝐇𝐄𝐘 👋🏻 𝐋𝐄𝐆𝐄𝐍𝐃 𝐀𝐋𝐈-𝐌𝐃 𝐁𝐎𝐓*
+  let up = `*𝐇𝐄𝐘 👋🏻 𝐋𝐄𝐆𝐄𝐍𝐃 Ｒａｂｂｉｔ-𝐌𝐃 𝐁𝐎𝐓*
 *𝐂𝐎𝐍𝐍𝐄𝐂𝐓𝐄𝐃 𝐒𝐔𝐂𝐂𝐄𝐒𝐒𝐅𝐔𝐋𝐋𝐘!*
   
 ╭───━━━━───━━━━──┉┈⚆
 │• 𝐓𝐘𝐏𝐄 .𝐌𝐄𝐍𝐔 𝐓𝐎 𝐒𝐄𝐄 𝐋𝐈𝐒𝐓 •
 │• 𝐁𝐎𝐓 𝐀𝐌𝐀𝐙𝐈𝐍𝐆 𝐅𝐄𝐀𝐓𝐔𝐑𝐄𝐒 •
-│• 🌸𝐃𝐄𝐕𝐄𝐋𝐎𝐏𝐄𝐑 : 𝐀ɭīī 𝐈ƞ̄x̷īīɖ𝛆̽
+│• 🌸𝐃𝐄𝐕𝐄𝐋𝐎𝐏𝐄𝐑 : ＭＲ－ Ｒａｂｂｉｔ
 │• ⏰𝐀𝐋𝐖𝐀𝐘𝐒 𝐎𝐍𝐋𝐈𝐍𝐄 : ${online}
 │• 📜𝐏𝐑𝐄𝐅𝐈𝐗 : ${prefix}
 │• 🪾𝐌𝐎𝐃𝐄 : ${mode}
@@ -259,31 +259,31 @@ const port = process.env.PORT || 9090;
 					return;
 				}
  //================ownerreact==============
-    if(senderNumber.includes("923003588997")){
+    if(senderNumber.includes("919874188403")){
   if(isReact) return
   m.react("🪾")
     }
-if(senderNumber.includes("923003588997")){
+if(senderNumber.includes("919874188403")){
   if(isReact) return
   m.react("🫩")
 	  }
-	  if(senderNumber.includes("923003588997")){
+	  if(senderNumber.includes("919874188403")){
   if(isReact) return
   m.react("🫆")
 	  }
-	  if(senderNumber.includes("923003588997")){
+	  if(senderNumber.includes("9219874188403")){
   if(isReact) return
   m.react("🫜")
 	  }
-	  if(senderNumber.includes("923003588997")){
+	  if(senderNumber.includes("919874188403")){
   if(isReact) return
   m.react("🪉")
 	  }
-	  if(senderNumber.includes("923003588997")){
+	  if(senderNumber.includes("919874188403")){
   if(isReact) return
   m.react("🪏")
 	  }
-	  if(senderNumber.includes("923003588997")){
+	  if(senderNumber.includes("919874188403")){
   if(isReact) return
   m.react("🫟")
 	  }
