@@ -1,5 +1,3 @@
-
-
 const { cmd } = require('../command');
 const axios = require('axios');
 const moment = require('moment');
@@ -80,7 +78,7 @@ async function sendDailyFact(conn, reply) {
 // Function to calculate the time until 6 AM and set the interval
 function sendDailyFactAt6AM(conn, reply) {
     const now = moment();
-    const targetTime = moment().set({ hour: 6, minute: 0, second: 0, millisecond: 0 }); // 6 AM Cameroon time
+    const targetTime = moment().set({ hour: 6, minute: 0, second: 0, millisecond: 0 }); // 6 AM time
 
     if (now.isAfter(targetTime)) {
         // If it's already past 6 AM today, set the time for 6 AM tomorrow
@@ -141,7 +139,7 @@ cmd({
 }, async (conn, mek, m, { args, reply }) => {
     try {
         if (args.length === 0) {
-            return reply("❌ Please provide a timezone. Example: `.timezone Europe/Paris`");
+            return reply("❌ Please provide a timezone. Example: `.timezone Asia/Islamabad`");
         }
 
         // Get the timezone input from the user
@@ -162,4 +160,38 @@ cmd({
         console.error("Error fetching time:", error.message);
         reply("❌ Sorry, I couldn't fetch the time for the specified timezone. Please ensure the timezone is valid.");
     }
+});
+cmd({
+  pattern: "photo",
+  alias: ["toimage", "photo"],
+  desc: "Convert a sticker to an image.",
+  category: "tools",
+  filename: __filename,
+}, async (conn, mek, m, { reply }) => {
+  try {
+    // Vérifier si l'utilisateur a répondu à un message
+    if (!m.quoted) {
+      return reply("*📛 ᴘʟᴇᴀsᴇ ʀᴇᴘʟʏ ᴛᴏ ᴀ sᴛɪᴄᴋᴇʀ ᴛᴏ ᴄᴏɴᴠᴇʀᴛ ɪᴛ ᴛᴏ ᴀɴ ɪᴍᴀɢᴇ.*");
+    }
+
+    // Vérifier si le message cité est un sticker
+    if (m.quoted.mtype !== "stickerMessage") {
+      return reply("❌ The replied message is not a sticker.");
+    }
+
+    // Télécharger le sticker
+    let media = await m.quoted.download();
+
+    // Vérifier si le téléchargement a réussi
+    if (!media) {
+      return reply("❌ Failed to download the sticker.");
+    }
+
+    // Envoyer l'image convertie
+    await conn.sendMessage(m.chat, { image: media, caption: "*✅ HERE IS YOUR IMAGE.*" }, { quoted: m });
+
+  } catch (error) {
+    reply("❌ An error occurred while converting the sticker to an image.");
+    console.error(error);
+  }
 });
