@@ -1,6 +1,6 @@
-name: oggy-ai
+name: rabbit-ai
 services:
-  - name: oggy-ai-service
+  - name: rabbit-ai-service
     type: web
     ports:
       - 5000
